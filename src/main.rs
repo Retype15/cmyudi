@@ -172,7 +172,7 @@ fn ejecutar_comando_sistema(cmd: &str, args: &[&str], input_completo: &str) {
 }
 
 fn obtener_imagen_aleatoria() -> Option<PathBuf> {
-    let paths = fs::read_dir(".").ok()?;
+    let paths = fs::read_dir("./images").ok()?;
 
     let imagenes: Vec<PathBuf> = paths
         .filter_map(|entry| entry.ok()) 
